@@ -10,14 +10,26 @@
 
 @implementation CSVParser
 
-- (id)init
+#pragma mark Initializers
+
+// designated initializer
+- (id)initWithDelegate:(id)delegate andDataSource:(id)dataSource
 {
     self = [super init];
     if (self) {
-        
+        _delegate = delegate;
+        _dataSource = dataSource;
     }
     return self;
 }
+
+- (id)init
+{
+    return [self initWithDelegate:nil andDataSource:nil];
+}
+
+
+#pragma mark - Parsing
 
 - (void)parse
 {
@@ -30,8 +42,7 @@
         [self.delegate parserDidStartParsing:self linesNo:lines.count];
     }
     
-    NSUInteger i = 0;
-    
+    NSUInteger i = 0;    
     for (NSString *line in lines){
         [self parseLine:line atIndex:i];
         i++;

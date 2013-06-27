@@ -51,11 +51,8 @@
 @optional
 - (void)parserDidStartParsing:(CSVParser *)parser linesNo:(NSUInteger)linesNo;
 - (void)parserDidEndParsing:(CSVParser *)parser;
-
 - (BOOL)parser:(CSVParser *)parser shouldParseLineAtIndex:(NSInteger)index;
 - (BOOL)parser:(CSVParser *)parser shouldParseLineWithString:(NSString *)string;
-
-//- (void)parser:(CSVParser *)parser didLoadLineWithString:(NSString *)string atIndex:(NSUInteger)index;
 - (void)parser:(CSVParser *)parser didExplodeLineToArray:(NSArray *)array atIndex:(NSUInteger)index;
 @end
 
