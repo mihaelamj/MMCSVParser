@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A983691F177D9F2300E05668 /* test1.csv in Resources */ = {isa = PBXBuildFile; fileRef = A983691E177D9F2300E05668 /* test1.csv */; };
+		A9836921177D9F6F00E05668 /* test2.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9836920177D9F6F00E05668 /* test2.csv */; };
 		A99F5535177C901400B23911 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99F5534177C901400B23911 /* UIKit.framework */; };
 		A99F5537177C901400B23911 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99F5536177C901400B23911 /* Foundation.framework */; };
 		A99F5539177C901400B23911 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99F5538177C901400B23911 /* CoreGraphics.framework */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A983691E177D9F2300E05668 /* test1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test1.csv; sourceTree = "<group>"; };
+		A9836920177D9F6F00E05668 /* test2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test2.csv; sourceTree = "<group>"; };
 		A99F5531177C901400B23911 /* MMJCSVParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMJCSVParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99F5534177C901400B23911 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A99F5536177C901400B23911 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,8 +90,6 @@
 		A99F553A177C901400B23911 /* MMJCSVParser */ = {
 			isa = PBXGroup;
 			children = (
-				A99F5543177C901400B23911 /* CSVPAppDelegate.h */,
-				A99F5544177C901400B23911 /* CSVPAppDelegate.m */,
 				A99F554C177C901400B23911 /* MainStoryboard.storyboard */,
 				A99F554F177C901400B23911 /* CSVPViewController.h */,
 				A99F5550177C901400B23911 /* CSVPViewController.m */,
@@ -100,6 +102,10 @@
 		A99F553B177C901400B23911 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9836920177D9F6F00E05668 /* test2.csv */,
+				A983691E177D9F2300E05668 /* test1.csv */,
+				A99F5543177C901400B23911 /* CSVPAppDelegate.h */,
+				A99F5544177C901400B23911 /* CSVPAppDelegate.m */,
 				A99F553C177C901400B23911 /* MMJCSVParser-Info.plist */,
 				A99F553D177C901400B23911 /* InfoPlist.strings */,
 				A99F5540177C901400B23911 /* main.m */,
@@ -177,6 +183,8 @@
 				A99F5549177C901400B23911 /* Default@2x.png in Resources */,
 				A99F554B177C901400B23911 /* Default-568h@2x.png in Resources */,
 				A99F554E177C901400B23911 /* MainStoryboard.storyboard in Resources */,
+				A983691F177D9F2300E05668 /* test1.csv in Resources */,
+				A9836921177D9F6F00E05668 /* test2.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +321,7 @@
 				A99F5556177C901400B23911 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

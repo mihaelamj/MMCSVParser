@@ -41,6 +41,7 @@
 @property (nonatomic, weak) id <CSVParserDataSource> dataSource;
 
 - (void)parse;
+- (id)initWithDelegate:(id)delegate andDataSource:(id)dataSource;
 @end
 
 @protocol CSVParserDelegate <NSObject>

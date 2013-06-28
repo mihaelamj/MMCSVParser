@@ -35,28 +35,26 @@
 {
     NSString *stringToParse = [self.dataSource stringToParse:self];
     if (!stringToParse) return;    
-    NSArray *lines = [stringToParse componentsSeparatedByString:@"\n"];
-    
+    NSArray *lines = [stringToParse componentsSeparatedByString:@"\n"];    
     // tell delegate the parsing has started
     if ([self.delegate respondsToSelector:@selector(parserDidStartParsing:linesNo:)]) {
         [self.delegate parserDidStartParsing:self linesNo:lines.count];
     }
     
-    NSUInteger i = 0;    
+    NSInteger i = -1;
     for (NSString *line in lines){
-        [self parseLine:line atIndex:i];
         i++;
+        BOOL shouldParseLine = YES;        
         // check if we should parse line at index
         if ([self.delegate respondsToSelector:@selector(parser:shouldParseLineAtIndex:)]) {
-            if (![self.delegate parser:self shouldParseLineAtIndex:i]) continue;
+            shouldParseLine = [self.delegate parser:self shouldParseLineAtIndex:i] ;
         }
         //check if we should parse this line
         if ([self.delegate respondsToSelector:@selector(parser:shouldParseLineWithString:)]) {
-            if (![self.delegate parser:self shouldParseLineWithString:line]) continue;
+            shouldParseLine = [self.delegate parser:self shouldParseLineWithString:line] && shouldParseLine;
         }
-        [self parseLine:line atIndex:i];
-    }
-    
+        if (shouldParseLine) [self parseLine:line atIndex:i];
+    }    
     // tell delegate the parsing has ended
     if ([self.delegate respondsToSelector:@selector(parserDidEndParsing:)]) {
         [self.delegate parserDidEndParsing:self];
